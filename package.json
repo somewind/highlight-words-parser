@@ -1,11 +1,12 @@
 {
   "name": "highlight-words-parser",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "license": "MIT",
   "description": "Parse a give string to highlight words",
   "author": "somewind <neverstopsteps@gmail.com> (https://github.com/somewind)",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
+    "build": "babel src -d lib",
     "commit": "git-cz",
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s"
   },
@@ -18,7 +19,17 @@
     "eslint-plugin-import": "^2.16.0",
     "eslint-plugin-node": "^8.0.1",
     "eslint-plugin-promise": "^4.0.1",
-    "eslint-plugin-standard": "^4.0.0"
+    "eslint-plugin-standard": "^4.0.0",
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.8.7",
+    "@babel/preset-env": "^7.8.7",
+    "core-js": "3"
+  },
+  "browserslist": {
+    "production": [
+      "> 1%",
+      "ie >= 9"
+    ]
   },
   "peerDependencies": {},
   "keywords": [
